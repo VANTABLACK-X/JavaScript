@@ -6,7 +6,7 @@ let addition = x + y;
 let subtraction = x - y;
 let multiplication = x * y;
 let division = x / y;
-let modulus = x % z;
+let modulus = x % z;       //to find remainder
 let increment = ++x;
 
 console.log(`addition of 12 and 4 : ${addition}`);
