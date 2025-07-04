@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper scissors</title>
+</head>
+<body>
+
+    <p>Rock Paper Scissors</p>
+    <!-- 1. Generate a random number between 1 and 3
+    2. Use the random number to determine the computer's choice.
+    3. If randomNumber is 1, computer chooses rock; if 2, paper; if 3, scissors.-->
+    <p>Choose your move:</p>
+    <button onclick="
+    const randomNumber1 = Math.floor(Math.random() *(3 - 1 + 1)) + 1;
+    let computerChoice1 = '';
+    if (randomNumber1 === 1) {
+        computerChoice1 = 'rock';
+    } else if (randomNumber === 2) {
+        computerChoice1 = 'paper';
+    } else {
+        computerChoice1 = 'scissors';
+    }
+
+    let result1 = '';
+    if (computerChoice1 === 'rock') {
+        result1 =`It\'s a tie! Both chose rock.`;
+    } else if (computerChoice1 === 'paper') {
+        result1 =`You lose! Paper beats rock.`;
+    } else {
+        result1 =`You win! Rock beats scissors.`;
+    }
+
+    document.getElementById('result').innerText = result1;
+    ">Rock</button>
+    <button onclick="
+    const randomNumber2 = Math.floor(Math.random() *(3 - 1 + 1)) + 1;
+    let computerChoice2 = '';
+    if (randomNumber2 === 1) {
+        computerChoice2 = 'rock';
+    } else if (randomNumber2 === 2) {
+        computerChoice2 = 'paper';
+    } else {
+        computerChoice2 = 'scissors';
+    }
+
+    let result2 = '';
+    if (computerChoice2 === 'rock') {
+        result2 =`You win! paper beats rock.`;
+    } else if (computerChoice2 === 'paper') {
+        result2 =`It\'s a tie! Both chose paper.`;
+    } else {
+        result2 =`You lose! scissors beats  Paper.`;
+    }
+
+    document.getElementById('result').innerText = result2;
+    ">Paper</button>
+    <button onclick="
+    const randomNumber = Math.floor(Math.random() *(3 - 1 + 1)) + 1;
+    let computerChoice = '';
+    if (randomNumber === 1) {
+        computerChoice = 'rock';
+    } else if (randomNumber === 2) {
+        computerChoice = 'paper';
+    } else {
+        computerChoice = 'scissors';
+    }
+
+    let result = '';
+    if (computerChoice === 'rock') {
+        result=`You lose! rock beats scissors.`;
+    } else if (computerChoice === 'paper') {
+        result=`You win! scissors beats paper.`;
+    } else {
+        result=`It\'s a tie! Both chose scissors.`;
+    }
+
+    document.getElementById('result').innerText = result;
+    ">Scissors</button>
+
+    <!--
+    steps :
+    when we click a button:
+    1. computer randomly chooses rock, paper, or scissors.
+    2. we compare the computer's choice with our choice.
+    3. display the result in a popup.
+    This is called algorithm.
+    --> 
+
+    <p id="result"></p>
+    <script>
+
+    </script>
+</body>
+</html>
