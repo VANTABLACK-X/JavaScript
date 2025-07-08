@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>functions</title>
 </head>
+
 <body>
     <style>
         body {
@@ -28,11 +30,11 @@
     </style>
     <p>Rock Paper Scissors Using Function</p>
     <p>Choose your weapon :</p>
-    <button onclick= " getComputerChoice();
+    <button onclick=" const computerChoice1 = getComputerChoice();
     let result1 = '';
-    if (computerChoice === 'rock') {
+    if (computerChoice1 === 'rock') {
         result1 =`It\'s a tie! Both chose rock.`;
-    } else if (computerChoice === 'paper') {
+    } else if (computerChoice1 === 'paper') {
         result1 =`You lose! Paper beats rock.`;
     } else {
         result1 =`You win! Rock beats scissors.`;
@@ -41,11 +43,11 @@
     document.getElementById('result').innerText = result1;
     ">Rock</button>
 
-    <button onclick= " getComputerChoice();
+    <button onclick=" const computerChoice2 = getComputerChoice();
     let result2 = '';
-    if (computerChoice === 'rock') {
+    if (computerChoice2 === 'rock') {
         result2 =`You win! paper beats rock.`;
-    } else if (computerChoice === 'paper') {
+    } else if (computerChoice2 === 'paper') {
         result2 =`It\'s a tie! Both chose paper.`;
     } else {
         result2 =`You lose! scissors beats paper.`;
@@ -54,11 +56,11 @@
     document.getElementById('result').innerText = result2;
     ">Paper</button>
 
-    <button onclick= " getComputerChoice();
+    <button onclick=" const computerChoice3 =  getComputerChoice();
     let result3 = '';
-    if (computerChoice === 'rock') {
+    if (computerChoice3 === 'rock') {
         result3 =`You lose! rock beats scissors.`;
-    } else if (computerChoice === 'paper') {
+    } else if (computerChoice3 === 'paper') {
         result3 =`You win! scissors beats paper.`;
     } else {
         result3 =`It\'s a tie! Both chose scissors.`;
@@ -68,10 +70,9 @@
     ">scissors</button>
     <p id="result"></p>
     <script>
-        let computerChoice = '';
         function getComputerChoice() {
             const randomNumber = Math.floor(Math.random() * 3) + 1;
-
+            let computerChoice = '';
             if (randomNumber === 1) {
                 computerChoice = 'rock';
             } else if (randomNumber === 2) {
@@ -79,8 +80,9 @@
             } else {
                 computerChoice = 'scissors';
             }
-
+            return computerChoice;
         }
     </script>
 </body>
+
 </html>
