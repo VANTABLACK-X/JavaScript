@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock paper scissors</title>
 </head>
-
 <body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        #result {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-    </style>
-    <p>Rock Paper Scissors Using If</p>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+    <p>Rock Paper Scissors</p>
     <!-- 1. Generate a random number between 1 and 3
     2. Use the random number to determine the computer's choice.
     3. If randomNumber is 1, computer chooses rock; if 2, paper; if 3, scissors.-->
     <p>Choose your move:</p>
     <button onclick="
-    const randomNumber1 = Math.floor(Math.random() *(3 - 1 + 1)) + 1;
+    const randomNumber1 = Math.floor(Math.random() * 3) + 1;
     let computerChoice1 = '';
     if (randomNumber1 === 1) {
         computerChoice1 = 'rock';
@@ -56,7 +52,7 @@
     document.getElementById('result').innerText = result1;
     ">Rock</button>
     <button onclick="
-    const randomNumber2 = Math.floor(Math.random() *(3 - 1 + 1)) + 1;
+    const randomNumber2 = Math.floor(Math.random() * 3) + 1;
     let computerChoice2 = '';
     if (randomNumber2 === 1) {
         computerChoice2 = 'rock';
@@ -78,7 +74,7 @@
     document.getElementById('result').innerText = result2;
     ">Paper</button>
     <button onclick="
-    const randomNumber = Math.floor(Math.random() *(3 - 1 + 1)) + 1;
+    const randomNumber = Math.floor(Math.random() * 3) + 1;
     let computerChoice = '';
     if (randomNumber === 1) {
         computerChoice = 'rock';
@@ -107,10 +103,9 @@
     2. we compare the computer's choice with our choice.
     3. display the result in a popup.
     This is called algorithm.
-    -->
+    --> 
 
     <p id="result"></p>
     <script> </script>
 </body>
-
 </html>
