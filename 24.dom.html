@@ -4,14 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dom</title>
 </head>
 
 <body>
     <button>Hello</button>
+    <button class="js">button2</button>
 
     <script>
-        document.body.innerHTML='hi';
+        // Accessing the element
+        console.log(document.querySelector('button'));
+        console.log(document.querySelector('button').innerHTML = 'Hi');
+        // class selector
+        console.log(document.querySelector('.js'));
+
+        /*
+        // Accessing the body
+        console.log(document.body);
+        console.log(typeof document.body);
+        console.log(document.body.innerHTML);
+        //document.body.innerHTML = 'changed';
+        document.body.innerHTML = '<button>Hello</button>';
+        */
+
+        /*
+        document.body.innerHTML = 'hi';
+        document.title = 'hello';
+        */
     </script>
 </body>
 
