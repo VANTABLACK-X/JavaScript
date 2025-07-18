@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom projects</title>
+</head>
+
+<body>
+    <!-- Algorithm 
+     if we click the subscribe button has a value Subscribe => Subscribed.
+     otherwise change back to Subscribe. 
+    -->
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+    subscribe()
+    " class="js-subscribe">Subscribe</button>
+
+    <!--Algorithm
+    1. get text in text box
+    2. if amount < $40, add $10
+    3. display the total
+    -->
+    <p>Amazon Shipping Calculator</p>
+
+    <!--when we press a key:
+    1. check if it is "Enter"
+    2. if it is, do the same same thing as the calculate button
+    -->
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+    handleCostKeyDown(event);
+    ">
+
+    <button onclick="
+    CalculateTotal();
+    ">Calculate</button>
+
+    <p class="js-total-cost"></p>
+
+
+    <script>
+
+        function handleCostKeyDown(event) {
+            if (event.key === 'Enter') {
+                CalculateTotal();
+            }
+        }
+
+        function CalculateTotal() {
+            const inputElement = document.querySelector('.js-cost-input');
+            // whenever we get value from DOM it will be a String.
+            let cost = Number(inputElement.value);
+
+            if (cost < 40) {
+                cost = cost + 10;
+            }
+
+            document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+        }
+
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe');
+
+            if (buttonElement.innerHTML === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed';
+            }
+            else {
+                buttonElement.innerHTML = 'Subscribe';
+            }
+        }
+    </script>
+</body>
+
+</html>

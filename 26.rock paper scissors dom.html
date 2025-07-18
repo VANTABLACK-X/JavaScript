@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<style>
+ body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+</style>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+      playGame('rock');
+    ">Rock</button>
+
+    <button onclick="
+      playGame('paper');
+    ">Paper</button>
+
+    <button onclick="
+      playGame('scissors');
+    ">Scissors</button>
+
+    <button onclick="
+    scores.wins = 0;
+    scores.losses = 0;
+    scores.ties = 0;
+    localStorage.removeItem('scores'); // remove the value
+    playGame(); 
+    ">Clear Scores</button>
+
+    <p class="result"></p>
+
+    <script>
+
+        // converting JSON string into object using parse() 
+        // getItem() is used to access the data in the local storage
+        let scores = JSON.parse(localStorage.getItem('scores')) || {
+                wins: 0,
+                losses: 0,
+                ties: 0
+            };
+/*
+        if(!scores) {  // ! = false, null = false. (scores===null) => (!scores)
+            scores = {
+                wins: 0,
+                losses: 0,
+                ties: 0
+            };
+        }
+*/
+        function playGame(playerMove) {
+            const computerMove = pickComputerMove();
+
+            let result = '';
+
+            if (playerMove === 'scissors') {
+                if (computerMove === 'rock') {
+                    result = 'You lose.';
+                } else if (computerMove === 'paper') {
+                    result = 'You win.';
+                } else if (computerMove === 'scissors') {
+                    result = 'Tie.';
+                }
+
+            } else if (playerMove === 'paper') {
+                if (computerMove === 'rock') {
+                    result = 'You win.';
+                } else if (computerMove === 'paper') {
+                    result = 'Tie.';
+                } else if (computerMove === 'scissors') {
+                    result = 'You lose.';
+                }
+
+            } else if (playerMove === 'rock') {
+                if (computerMove === 'rock') {
+                    result = 'Tie.';
+                } else if (computerMove === 'paper') {
+                    result = 'You lose.';
+                } else if (computerMove === 'scissors') {
+                    result = 'You win.';
+                }
+            }
+
+            // Update scores
+            if(result==='You win.'){
+                scores.wins++;
+            } else if(result==='You lose.'){
+                scores.losses++;
+            } else if(result==='Tie.'){
+                scores.ties++;
+            }
+
+            // local storage only support strings
+            // setItem() used to store value in local storage
+            // converting object into JSON string using stringify()
+            localStorage.setItem('scores', JSON.stringify(scores));
+
+           document.querySelector('.result').innerHTML = `You chose ${playerMove}, computer chose ${computerMove}. ${result} \n Wins: ${scores.wins}, Losses: ${scores.losses}, Ties: ${scores.ties}`;
+        }
+
+        function pickComputerMove() {
+            let computerMove = '';
+
+            const randomNumber = Math.floor(Math.random() * 3) + 1;
+            let computerChoice = '';
+            if (randomNumber === 1) {
+                computerChoice = 'rock';
+            } else if (randomNumber === 2) {
+                computerChoice = 'paper';
+            } else {
+                computerChoice = 'scissors';
+            }
+            return computerChoice;
+        }
+    </script>
+</body>
+
+</html>
