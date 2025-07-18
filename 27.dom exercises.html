@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- create a 9a button and display it on console-->
+    <button class="button1">9a</button>
+
+    <!-- create another button 9b and change the text 9b to 9b done! -->
+    <button class="button2">9b</button>
+
+    <!--Algorithm
+    1. create a two buttons heads, tails.
+    2. display the 
+    -->
+    <button onclick="userChoice('heads');">heads</button>
+    <button onclick="userChoice('tails');">tails</button>
+    <p class="choice">you chose:</p>
+
+    <!--Algorithm
+    1. create an input bar to take name
+    2. after name typed if we click the submit button it will display "your name is : with the name typed".
+    2. if we press Enter key it will display "your name is : with the name typed"
+    -->
+    <input placeholder="Name"  onkeydown="userKeyInput(event)" class="userName">
+    <button onclick="userName();">Submit</button>
+    <p class="yourName">your name is: </p>
+
+    <script>
+        console.log(document.querySelector('.button1').innerHTML);
+
+        console.log(document.querySelector('.button2').innerHTML = '9b done!');
+
+        function userChoice(choice) {
+            document.querySelector('.choice').innerHTML = 'you chose: ' + choice;
+        }
+
+        function userKeyInput(event) {
+            if(event.key === 'Enter') {
+                userName();
+            }
+        }
+
+        function userName() {
+           const userInputValue = document.querySelector('.userName');
+           const userInputName = userInputValue.value;
+           document.querySelector('.yourName').innerHTML = `your name is: ${userInputName}`; 
+        }
+    </script>
+</body>
+
+</html>

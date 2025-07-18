@@ -38,6 +38,11 @@
 
     <p class="js-total-cost"></p>
 
+    <input placeholder="repeat" class="js-repeat-input" onkeyup=" const keyInput = document.querySelector('.js-repeat-input');
+    document.querySelector('.js-repeat-output').innerHTML = keyInput.value;
+    ">
+
+    <p class="js-repeat-output"></p>
 
     <script>
 
@@ -50,13 +55,14 @@
         function CalculateTotal() {
             const inputElement = document.querySelector('.js-cost-input');
             // whenever we get value from DOM it will be a String.
-            let cost = Number(inputElement.value);
+            // if user enter 7.99 it will show a error so use cents every time.
+            let cost = Number(inputElement.value) * 100;
 
-            if (cost < 40) {
-                cost = cost + 10;
+            if (cost < 4000) {
+               cost = cost + 1000;
             }
 
-            document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+            document.querySelector('.js-total-cost').innerHTML = `$${cost / 100}`;
         }
 
         function subscribe() {
