@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <p class="out-put"></p>
+
+  <p>
+    <button onclick="
+        updateCalculation('1');
+      " class="allButtons">1</button>
+
+    <button onclick="
+        updateCalculation('2');
+      " class="allButtons">2</button>
+
+    <button onclick="
+        updateCalculation('3');
+      " class="allButtons">3</button>
+
+    <button onclick="
+        updateCalculation(' + ');
+      " class="allButtons arithmeticButton">+</button>
+  </p>
+
+  <p>
+    <button onclick="
+        updateCalculation('4');
+      " class="allButtons">4</button>
+
+    <button onclick="
+        updateCalculation('5');
+      " class="allButtons">5</button>
+
+    <button onclick="
+        updateCalculation('6');
+      " class="allButtons">6</button>
+
+    <button onclick="
+        updateCalculation(' - ');
+      " class="allButtons arithmeticButton">-</button>
+  </p>
+
+  <p>
+    <button onclick="
+        updateCalculation('7');
+      " class="allButtons">7</button>
+
+    <button onclick="
+        updateCalculation('8');
+      " class="allButtons">8</button>
+
+    <button onclick="
+        updateCalculation('9');
+      " class="allButtons">9</button>
+
+    <button onclick="
+        updateCalculation(' * ');
+      " class="allButtons arithmeticButton">*</button>
+  </p>
+
+  <p>
+    <button onclick="
+        updateCalculation('0');
+      " class="allButtons">0</button>
+
+    <button onclick="
+        updateCalculation('.');
+      " class="allButtons">.</button>
+
+    <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        outPut();
+      " class="allButtons">=</button>
+
+    <button onclick="
+        updateCalculation(' / ');
+      " class="allButtons arithmeticButton">/</button>
+  </p>
+
+  <p>
+    <button onclick="clearResult()" class="allButtons clearButton">Clear</button>
+  </p>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

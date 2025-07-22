@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu-buttons {
+            background-color: rgb(230, 230, 230);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-right: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            font-family: Arial;
+            cursor: pointer;
+        }
+
+        .is-toggled {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="js-gaming menu-buttons" onclick="changingButton('.js-gaming')">Gaming</button>
+    <button class="js-music menu-buttons" onclick="changingButton('.js-music')">Music</button>
+    <button class="js-tech menu-buttons" onclick="changingButton('.js-tech')">Tech</button>
+
+    <script>
+        function changingButton(buttonName) {
+            const button = document.querySelector(buttonName);
+
+            if (!button.classList.contains('is-toggled')) {
+
+                alreadyOn();
+                button.classList.add('is-toggled');
+            }
+            else {
+                button.classList.remove('is-toggled');
+            }
+        }
+
+        function alreadyOn() {
+            const activeButton = document.querySelector('.is-toggled');
+
+            if(activeButton) {
+                activeButton.classList.remove('is-toggled');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

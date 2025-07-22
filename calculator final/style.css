@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+    font-family: arial;
+}
+
+.out-put {
+    margin: 0;
+    font-size: 45px;
+    color: white;
+    height: 50px;
+}
+
+.allButtons {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    margin-right: 5px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.arithmeticButton {
+    background-color: orange;
+}
+
+.clearButton {
+    font-size: 17px;
+}

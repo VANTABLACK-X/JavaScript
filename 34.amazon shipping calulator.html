@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        .js-cost-input {
+            padding: 10px;
+        }
+
+        .calculateButton {
+            padding: 12px 10px;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Amazon Shipping Calculator</p>
+
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+    handleCostKeyDown(event);
+    ">
+
+    <button onclick="
+    CalculateTotal();
+    " class="calculateButton">Calculate</button>
+
+    <p class="js-total-cost"></p>
+</body>
+<script>
+    function CalculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value) * 100;
+        let outPut = document.querySelector('.js-total-cost');
+
+        if (cost > 0) {
+            if (cost < 4000) {
+                cost = cost + 1000;
+                outPut.classList.remove('error-message');
+                document.querySelector('.js-total-cost').innerHTML = `$${cost / 100}`;
+            }
+            else {
+                outPut.classList.remove('error-message');
+                document.querySelector('.js-total-cost').innerHTML = `$${cost / 100}`;
+            }
+        }
+        else {
+            outPut.classList.add('error-message');
+            outPut.innerHTML = 'Error: cost cannot be less than $0';
+        }
+    }
+</script>
+
+</html>
