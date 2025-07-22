@@ -1,4 +1,4 @@
-// display 0,2,4,6,8,10 using loop
+/* display 0,2,4,6,8,10 using loop
 for(let i = 0; i <= 10; i+=2) {
     console.log(i);
 }
@@ -34,3 +34,16 @@ function addOne(array) {
 }
 console.log(addOne([1,2,3]));
 console.log(addOne([-2,-1,1,100]));
+
+// increment array value by specified number
+
+function addNum(array,num) {
+    for(let i = 0; i < array.length; i++) {
+        array[i] += num;
+    }
+    return array;
+}
+console.log(addNum([1,2,3],2));
+console.log(addNum([1,2,3],3));
+console.log(addNum([-2,-1,0,99],2));
+*/
