@@ -35,7 +35,7 @@ function addOne(array) {
 console.log(addOne([1,2,3]));
 console.log(addOne([-2,-1,1,100]));
 
-// increment array value by specified number
+// add array values by specified number
 
 function addNum(array,num) {
     for(let i = 0; i < array.length; i++) {
@@ -47,3 +47,16 @@ console.log(addNum([1,2,3],2));
 console.log(addNum([1,2,3],3));
 console.log(addNum([-2,-1,0,99],2));
 */
+
+// add array numbers by specified array numbers
+
+function addNum(array1,array2) {
+    let addArray = [];
+    for(let i = 0; i < array1.length; i++) {
+        sum = array1[i] + array2[i];
+        addArray.push(sum);
+    }
+    return addArray;
+}
+console.log(addNum([1,1,2],[1,1,3]));
+console.log(addNum([1,2,3],[4,5,6]));
