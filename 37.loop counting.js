@@ -23,6 +23,7 @@ while(j >= 0) {
     console.log(j);
     j--;
 }
+console.log('\n');
 
 // add one [1,2,3] => [2,3,4]
 
@@ -34,6 +35,7 @@ function addOne(array) {
 }
 console.log(addOne([1,2,3]));
 console.log(addOne([-2,-1,1,100]));
+console.log('\n');
 
 // add array values by specified number
 
@@ -46,7 +48,7 @@ function addNum(array,num) {
 console.log(addNum([1,2,3],2));
 console.log(addNum([1,2,3],3));
 console.log(addNum([-2,-1,0,99],2));
-*/
+console.log('\n');
 
 // add array numbers by specified array numbers
 
@@ -60,3 +62,17 @@ function addNum(array1,array2) {
 }
 console.log(addNum([1,1,2],[1,1,3]));
 console.log(addNum([1,2,3],[4,5,6]));
+console.log('\n');
+*/
+
+// count positive numbers in an array using function
+function countPositive(array) {
+    let count = 0;
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] < 0) {
+            count++;
+        }
+    }
+    return count;
+}
+console.log(countPositive([-2,-1,1,-100]));
