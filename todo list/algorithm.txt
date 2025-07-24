@@ -26,3 +26,8 @@ call the renderTodoList() function to update the value displaying.
 create a input tag to add date in HTML file using input type.
 now we not only work with name only we got date also, so change the renderTodoList() empty array to empty object.
 to store the name and date create separate variables inside renderTodoList() function.
+add dueDate inside the p tag we created inside js code.
+inside addTodo() function create a variable to access date input from the HTML file.
+create another variable to store the value.
+change the todoList push method to object.
+push the object value into the totoList object
