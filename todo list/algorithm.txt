@@ -1,0 +1,28 @@
+create an html file.
+create input tag with placeholder name and class name.
+create a "add" button with a on-click attribute with a addTodo() function.
+in the js code create a array to store the list of data.
+create function addTodo().
+create a variable to access the input HTML tag.
+create another variable to store the value got from the input HTML tag.
+save the input value in the array using push() method.
+clear the input field to enter new data.
+create another function renderTodoList() to display the stored data and call it inside the addTodo() function.
+create a div tag with a class in the HTML file to display the data.
+to display the data we have store it in a separate variable. so create a empty string variable inside the renderTodoList() function.
+create a for loop to access every list of data inside the array.
+create a variable to store the data from the array list.
+we'r gonna create HTML p tag inside the js code and add it inside the div tag to display the data.
+store the created HTML data in a separate variable.
+add the variable has the HTML code with the empty string variable we created.
+and change the div tag inner HTML with this variable using DOM.
+now whenever we enter the list and click add button it'll show the list of data we added or adding.
+
+after this
+
+create a delete button inside the p tag we created inside js code.
+add on-click attribute with spilce(${i},1) method. with for loop we added value with index value. so whenever we click delete button it'll only delete the selected value from the list.
+call the renderTodoList() function to update the value displaying.
+create a input tag to add date in HTML file using input type.
+now we not only work with name only we got date also, so change the renderTodoList() empty array to empty object.
+to store the name and date create separate variables inside renderTodoList() function.

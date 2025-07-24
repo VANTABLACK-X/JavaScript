@@ -63,16 +63,62 @@ function addNum(array1,array2) {
 console.log(addNum([1,1,2],[1,1,3]));
 console.log(addNum([1,2,3],[4,5,6]));
 console.log('\n');
-*/
+
 
 // count positive numbers in an array using function
 function countPositive(array) {
     let count = 0;
     for(let i = 0; i < array.length; i++) {
-        if(array[i] < 0) {
+        if(array[i] > 0) {
             count++;
         }
     }
     return count;
 }
-console.log(countPositive([-2,-1,1,-100]));
+console.log(countPositive([2,-1,1,-100]));
+
+
+// find min max number
+
+function minMax(array) {
+    let result = {min:0, max:0};
+    for(let i =0; i < array.length; i++) {
+        if(array[i] < result.min) {
+            result.min = array[i];
+        }
+        else if(array[i] > result.max) {
+            result.max = array[i];
+        }
+    }
+    return result;
+}
+console.log(minMax([1,-3,5]));
+console.log(minMax([-2,3,-5,7,10]));
+
+console.log(minMax([]));
+console.log(minMax([5]));
+*/
+
+// count words using function
+
+function countWords(words) {
+        const result = {};
+
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+
+          // result[word] adds/accesses a property using whatever is
+          // saved inside the 'word' variable.
+          // If word = 'apple', result[word] will do result['apple']
+          // If word = 'grape', result[word] will do result['grape']
+          if (!result[word]) {
+            result[word] = 1;
+          } else {
+            result[word]++;
+          }
+        }
+
+        return result;
+      }
+
+      console.log(countWords(['apple', 'grape', 'apple', 'apple']));
