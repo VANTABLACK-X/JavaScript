@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techno Products</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #005599;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Techno Products Development Pvt. Ltd.</h1>
+    <p>Powering Industry. Driving Innovation.</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#projects">Our Projects</a>
+    <a href="#nabl">NABL Calibration</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to Techno Products Development Pvt. Ltd., your trusted partner in industrial automation and drive solutions since 1999. With over 2,000 stocked items and 4,000+ clients, we deliver trusted performance through quality, expertise, and service excellence.</p>
+  </section>
+
+  <section id="products">
+    <h2>Products</h2>
+    <ul>
+      <li>Electric Motors – IE2/IE3 energy-efficient motors</li>
+      <li>Gearboxes & Geared Motors – Helical, Worm, Planetary</li>
+      <li>Variable Frequency Drives (VFDs)</li>
+      <li>Brakes & Clutches – Electromagnetic, spring-loaded</li>
+      <li>Industrial Couplings – Flexible, Gear, Chain</li>
+      <li>Industrial Pumps – Centrifugal, submersible</li>
+      <li>Solar Inverters</li>
+      <li>Custom Control Panels</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Our Projects</h2>
+    <p>We’ve delivered custom automation solutions across textiles, construction, pharma, and manufacturing sectors—ranging from motor integrations to full control system automation.</p>
+  </section>
+
+  <section id="nabl">
+    <h2>NABL Calibration</h2>
+    <p>Our NABL-accredited lab offers certified calibration services in electrical, mechanical, and thermal domains to help your systems stay precise, compliant, and efficient.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Founded in 1999, Techno Products has built a legacy of excellence in industrial solutions. ISO-certified and CRISIL-rated, we serve industries with high-quality components, backed by technical support and a commitment to customer satisfaction.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> [Insert Full Address Here]</p>
+    <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+    <p><strong>Email:</strong> contact@technoproducts.co</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Techno Products Development Pvt. Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+
+</html>
