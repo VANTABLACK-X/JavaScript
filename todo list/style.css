@@ -1,14 +1,40 @@
-body{
+body {
     font-family: Arial;
 }
 
-.todo-grid p{
-    display: grid; 
-    grid-template-columns: 160px 115px 80px; 
-    gap: 10px; 
+.js-name-input{
+    height: 25px;
+}
+
+.js-due-date-input{
+    height: 27px;
+}
+
+.todo-grid p {
+    display: grid;
+    grid-template-columns: 160px 115px 80px;
+    gap: 10px;
     align-items: center;
 }
 
+.todo-grid span {
+    height: 25px;
+    border-radius: 2px;
+}
+
+.todo-grid button {
+    color: white;
+    height: 32px;
+    border-radius: 2px;
+    border: none;
+    background-color: rgb(151, 0, 0);
+}
+
 .addButton {
+    color: white;
+    height: 32px;
+    border-radius: 2px;
     width: 80px;
+    background-color: green;
+    border: none;
 }

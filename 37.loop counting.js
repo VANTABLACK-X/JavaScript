@@ -102,23 +102,23 @@ console.log(minMax([5]));
 // count words using function
 
 function countWords(words) {
-        const result = {};
+    const result = {};
 
-        for (let i = 0; i < words.length; i++) {
-          const word = words[i];
+    for (let i = 0; i < words.length; i++) {
+        const word = words[i];
 
-          // result[word] adds/accesses a property using whatever is
-          // saved inside the 'word' variable.
-          // If word = 'apple', result[word] will do result['apple']
-          // If word = 'grape', result[word] will do result['grape']
-          if (!result[word]) {
+        // result[word] adds/accesses a property using whatever is
+        // saved inside the 'word' variable.
+        // If word = 'apple', result[word] will do result['apple']
+        // If word = 'grape', result[word] will do result['grape']
+        if (!result[word]) {
             result[word] = 1;
-          } else {
+        } else {
             result[word]++;
-          }
         }
+    }
 
-        return result;
-      }
+    return result;
+}
 
-      console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+console.log(countWords(['apple', 'grape', 'apple', 'apple']));
