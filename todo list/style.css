@@ -2,11 +2,13 @@ body{
     font-family: Arial;
 }
 
-.todo-grid {
-    grid-template-columns: 200px 150px 100px;
-    background-color: blue;
+.todo-grid p{
+    display: grid; 
+    grid-template-columns: 160px 115px 80px; 
+    gap: 10px; 
+    align-items: center;
 }
 
-.todo-grid button{
-    background-color: red;
+.addButton {
+    width: 80px;
 }
